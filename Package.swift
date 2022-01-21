@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "bluecats-ios-sdk-swift",
-            targets: ["bluecats-ios-sdk-swift"]),
+            targets: ["bluecats-ios-sdk-swift", "BlueCatsSDK"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,8 +23,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "bluecats-ios-sdk-swift",
-            dependencies: ["bluecats-ios-sdk"]),
-        .binaryTarget(name: "bluecats-ios-sdk", path: "BlueCatsSDK.xcframework"),
+            dependencies: ["BlueCatsSDK"]),
+        .binaryTarget(name: "BlueCatsSDK", path: "BlueCatsSDK.xcframework"),
         .testTarget(
             name: "bluecats-ios-sdk-swiftTests",
             dependencies: ["bluecats-ios-sdk-swift"]),
