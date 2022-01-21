@@ -25,7 +25,17 @@ let package = Package(
         .target(
             name: "BlueCatsSDK-Swift",
             dependencies: ["BlueCatsSDK"],
-            path: "Sources/bluecats-ios-sdk-swift"),
+            path: "Sources/bluecats-ios-sdk-swift",
+            linkerSettings: [
+                //Frameworks
+                .linkedFramework("CoreLocation"),
+                .linkedFramework("CoreBluetooth"),
+                .linkedFramework("CoreServices"),
+                .linkedFramework("CoreGraphics"),
+                .linkedFramework("SystemConfiguration"),
+                .linkedFramework("CoreData"),
+            ]
+        ),
         .binaryTarget(
             name: "BlueCatsSDK", //binary target name must be same as the module name
             path: "BlueCatsSDK.xcframework"
