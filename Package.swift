@@ -28,12 +28,7 @@ let package = Package(
             path: "Sources/bluecats-ios-sdk-swift",
             linkerSettings: [
                 //Frameworks
-                .linkedFramework("CoreLocation"),
-                .linkedFramework("CoreBluetooth"),
-                .linkedFramework("CoreServices"),
-                .linkedFramework("CoreGraphics"),
-                .linkedFramework("SystemConfiguration"),
-                .linkedFramework("CoreData"),
+                
             ]
         ),
         .binaryTarget(
