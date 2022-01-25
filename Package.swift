@@ -7,7 +7,7 @@ import Darwin
 let package = Package(
     name: "BlueCatsSDK-Swift",
     platforms: [
-            .iOS(.v9)
+            .iOS(.v8)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
